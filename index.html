@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Esteira</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Controle de esteira</h1>
+            <div id="wifi-status" class="wifi-status">
+                <i class="fa-solid fa-wifi"></i>
+                <span>Conectado</span>
+            </div>
+        </header>
+
+        <main class="control-panel">
+            
+            <div class="control-item">
+                <p>Sensor Entrada</p>
+                <div class="indicator">
+                    <i id="indicator-sensor1" class="fa-solid fa-circle"></i>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="control-sensor1">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="control-item">
+                <p>Sensor Saída</p>
+                <div class="indicator">
+                    <i id="indicator-sensor2" class="fa-solid fa-circle"></i>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="control-sensor2">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="control-item">
+                <p>Motor Esteria</p>
+                <div class="indicator">
+                    <i id="indicator-motor" class="fa-solid fa-circle"></i>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="control-motor">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </main>
+        
+        <footer class="emergency-section">
+            <button id="emergency-btn" class="emergency-btn">Emergency</button>
+        </footer>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

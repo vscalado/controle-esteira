@@ -1,0 +1,169 @@
+/* Importando uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos Globais */
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --off-color: #6c757d;
+    --background-light: #f8f9fa;
+    --background-card: #ffffff;
+    --text-color: #343a40;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container Principal */
+.container {
+    background-color: var(--background-card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.wifi-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* Painel de Controle */
+.control-panel {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.control-item p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+/* Indicadores (Ícones que mudam de cor) */
+.indicator {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    height: 32px; /* Altura fixa para não "pular" */
+}
+
+.indicator .fa-circle {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Classes de status para os indicadores */
+.status-on {
+    color: var(--success-color);
+}
+.status-off {
+    color: #e0e0e0; /* Cinza claro para desligado */
+}
+
+
+/* Controladores (Switches) */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--success-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--success-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Botão de Emergência */
+.emergency-section {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.emergency-btn {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.emergency-btn:hover {
+    background-color: #c82333;
+}
+
+.emergency-btn:active {
+    transform: scale(0.98);
+}
